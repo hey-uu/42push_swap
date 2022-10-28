@@ -1,8 +1,0 @@
-{
-	"files.associations": {
-		"ft_dequeue.h": "c",
-		"push_swap.h": "c",
-		"push_swap_set.h": "c",
-		"merge_sort.h": "c"
-	}
-}

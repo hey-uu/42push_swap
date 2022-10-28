@@ -2,6 +2,7 @@
 *_test.c
 objcs
 .DS_Store
+.vscode
 
 # Prerequisites
 *.d
