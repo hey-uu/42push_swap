@@ -6,7 +6,7 @@
 /*   By: hyeyukim <hyeyukim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 14:06:18 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/10/29 11:00:39 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/10/29 11:42:01 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 #include "../libft/ft_libft_mandatory/libft.h"
 #include "../ds/ds_dequeue/ft_dequeue.h"
 #include "push_swap_merge_sort/merge_sort.h"
-
 #ifndef FT_INT_MAX
 # define FT_INT_MAX 2147483647
 #endif

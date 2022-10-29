@@ -6,7 +6,7 @@
 /*   By: hyeyukim <hyeyukim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 14:05:31 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/10/28 16:25:16 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/10/29 13:17:40 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ enum e_cmd
 	NON = 11
 };
 
-typedef void	(*t_cmd)(t_ps_set *);
+typedef int	(*t_cmd)(t_ps_set *);
 
 // implement mutiple commands at once
 void	implement_commands(t_ps_set *set, const int *command, int cmd_size);
@@ -39,16 +39,16 @@ void	push_all(t_ps_set *set, int cmd);
 void	push_n_elements(t_ps_set *set, int number, int cmd);
 
 // basic commands for push swap
-void	sa(t_ps_set *set);
-void	sb(t_ps_set *set);
-void	ss(t_ps_set *set);
-void	pa(t_ps_set *set);
-void	pb(t_ps_set *set);
-void	ra(t_ps_set *set);
-void	rb(t_ps_set *set);
-void	rr(t_ps_set *set);
-void	rra(t_ps_set *set);
-void	rrb(t_ps_set *set);
-void	rrr(t_ps_set *set);
+int	sa(t_ps_set *set);
+int	sb(t_ps_set *set);
+int	ss(t_ps_set *set);
+int	pa(t_ps_set *set);
+int	pb(t_ps_set *set);
+int	ra(t_ps_set *set);
+int	rb(t_ps_set *set);
+int	rr(t_ps_set *set);
+int	rra(t_ps_set *set);
+int	rrb(t_ps_set *set);
+int	rrr(t_ps_set *set);
 
 #endif

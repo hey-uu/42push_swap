@@ -6,7 +6,7 @@
 /*   By: hyeyukim <hyeyukim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 10:45:42 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/10/29 10:45:43 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/10/29 15:47:03 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,22 +39,16 @@ void	ps_set_show(t_ps_set *set, int map_opt, int stack_opt, int cmd_opt)
 
 void	cmd_show(t_dequeue *cmds)
 {
-	const char	tab[12][4] = {"pa", "pb", "ss", "sa", "sb", "ra", "rb", "rr", \
+	const char	tab[12][4] = {"pa", "pb", "sa", "sb", "ss", "ra", "rb", "rr", \
 							"rra", "rrb", "rrr", "none"};
 	int			i;
-	int			j;
 
 	ft_printf("\n[stored commands]");
 	ft_printf("\n-----------------------------------------\n");
 	i = -1;
-	while (i < cmds->used_size)
+	while (++i < cmds->used_size)
 	{
-		j = -1;
-		while (++j < 10 && ++i < cmds->used_size)
-		{
-			ft_printf("%-5s  ", tab[cmds->arr[(cmds->front + i) % cmds->size]]);
-		}
-		ft_printf("\n");
+		ft_printf("%-5s  ", tab[dq_get_value(cmds, FRONT, i)]);
 	}
 	ft_printf("\n-----------------------------------------\n");
 }

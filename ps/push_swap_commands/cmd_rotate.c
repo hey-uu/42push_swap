@@ -6,7 +6,7 @@
 /*   By: hyeyukim <hyeyukim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 14:05:21 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/10/28 21:27:47 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/10/29 13:15:04 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,45 +14,48 @@
 #include "../../libft/ft_printf/ft_printf.h"
 #include "push_swap_command.h"
 
-void	ra(t_ps_set *set)
+int	ra(t_ps_set *set)
 {
 	int	popped;
 
 	if (set->stack_a->used_size == 1)
-		return ;
+		return (1);
 	popped = dq_pop_front(set->stack_a);
 	dq_push_rear(set->stack_a, popped);
 	dq_push_rear(set->commands, RA);
+	return (1);
 }
 
-void	rb(t_ps_set *set)
+int	rb(t_ps_set *set)
 {
 	int	popped;
 
 	if (set->stack_b->used_size == 1)
-		return ;
+		return (1);
 	popped = dq_pop_front(set->stack_b);
 	dq_push_rear(set->stack_b, popped);
 	dq_push_rear(set->commands, RB);
+	return (1);
 }
 
-void	rr(t_ps_set *set)
+int	rr(t_ps_set *set)
 {
 	int	popped;
 
 	if (set->stack_a->used_size == 1)
 	{
 		rb(set);
-		return ;
+		return (1);
 	}
 	popped = dq_pop_front(set->stack_a);
 	dq_push_rear(set->stack_a, popped);
 	if (set->stack_b->used_size == 1)
 	{
 		ra(set);
-		return ;
+		return (1);
 	}
 	popped = dq_pop_front(set->stack_b);
 	dq_push_rear(set->stack_b, popped);
 	dq_push_rear(set->commands, RR);
+	return (1);
 }

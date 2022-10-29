@@ -6,7 +6,7 @@
 /*   By: hyeyukim <hyeyukim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 14:05:10 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/10/28 21:27:31 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/10/29 14:12:46 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,26 @@
 #include "../../libft/ft_printf/ft_printf.h"
 #include "push_swap_command.h"
 
-void	pa(t_ps_set *set)
+int	pa(t_ps_set *set)
 {
 	int	popped;
 
 	if (set->stack_b->used_size == 0)
-		return ;
+		return (0);
 	popped = dq_pop_front(set->stack_b);
 	dq_push_front(set->stack_a, popped);
 	dq_push_rear(set->commands, PA);
+	return (1);
 }
 
-void	pb(t_ps_set *set)
+int	pb(t_ps_set *set)
 {
 	int	popped;
 
 	if (set->stack_a->used_size == 0)
-		return ;
+		return (0);
 	popped = dq_pop_front(set->stack_a);
 	dq_push_front(set->stack_b, popped);
 	dq_push_rear(set->commands, PB);
+	return (1);
 }
