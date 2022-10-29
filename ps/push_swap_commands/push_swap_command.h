@@ -6,7 +6,7 @@
 /*   By: hyeyukim <hyeyukim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 14:05:31 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/10/29 13:17:40 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/10/29 17:36:22 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,16 +39,16 @@ void	push_all(t_ps_set *set, int cmd);
 void	push_n_elements(t_ps_set *set, int number, int cmd);
 
 // basic commands for push swap
-int	sa(t_ps_set *set);
-int	sb(t_ps_set *set);
-int	ss(t_ps_set *set);
-int	pa(t_ps_set *set);
-int	pb(t_ps_set *set);
-int	ra(t_ps_set *set);
-int	rb(t_ps_set *set);
-int	rr(t_ps_set *set);
-int	rra(t_ps_set *set);
-int	rrb(t_ps_set *set);
-int	rrr(t_ps_set *set);
+int		sa(t_ps_set *set);
+int		sb(t_ps_set *set);
+int		ss(t_ps_set *set);
+int		pa(t_ps_set *set);
+int		pb(t_ps_set *set);
+int		ra(t_ps_set *set);
+int		rb(t_ps_set *set);
+int		rr(t_ps_set *set);
+int		rra(t_ps_set *set);
+int		rrb(t_ps_set *set);
+int		rrr(t_ps_set *set);
 
 #endif

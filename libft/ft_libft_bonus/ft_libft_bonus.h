@@ -6,10 +6,9 @@
 /*   By: hyeyukim <hyeyukim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 09:08:16 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/10/29 09:13:05 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/10/29 17:35:57 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #ifndef FT_LIBFT_BONUS_H
 # define FT_LIBFT_BONUS_H
