@@ -6,7 +6,7 @@
 #    By: hyeyukim <hyeyukim@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/07 11:46:51 by hyeyukim          #+#    #+#              #
-#    Updated: 2022/10/29 10:41:12 by hyeyukim         ###   ########.fr        #
+#    Updated: 2022/10/29 16:55:58 by hyeyukim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -83,11 +83,11 @@ PRINTF_DIR = ft_printf
 GNL_DIR = ft_get_next_line
 DIRS = $(OBJCS_DIR) $(OBJCS_DIR)/$(LIBFT_DIR) $(OBJCS_DIR)/$(BONUS_DIR) \
 		$(OBJCS_DIR)/$(PRINTF_DIR) $(OBJCS_DIR)/$(GNL_DIR)
-# source files
-LIBFT_SRCS = $(addsuffix .c, $(LIBFT_FILE))
-BONUS_SRCS = $(addsuffix .c, $(BONUS_FILE))
-PRINTF_SRCS = $(addprefix $(PRINTF_DIR), $(addsuffix .c, $(PRINTF_FILE)))
-GNL_SRCS = $(addprefix $(GNL_DIR), $(addsuffix .c $(GNL_FILE)))
+# # source files
+# LIBFT_SRCS = $(addsuffix .c, $(LIBFT_FILE))
+# BONUS_SRCS = $(addsuffix .c, $(BONUS_FILE))
+# PRINTF_SRCS = $(addprefix $(PRINTF_DIR), $(addsuffix .c, $(PRINTF_FILE)))
+# GNL_SRCS = $(addprefix $(GNL_DIR), $(addsuffix .c $(GNL_FILE)))
 # object files
 LIBFT_OBJCS = $(addprefix $(OBJCS_DIR)/$(LIBFT_DIR)/, $(addsuffix .o, $(LIBFT_FILE)))
 BONUS_OBJCS = $(addprefix $(OBJCS_DIR)/$(BONUS_DIR)/, $(addsuffix .o, $(BONUS_FILE)))
