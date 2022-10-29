@@ -1,22 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   checker_bonus.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hyeyukim <hyeyukim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/27 14:01:46 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/10/27 14:01:47 by hyeyukim         ###   ########.fr       */
+/*   Created: 2022/10/29 08:34:33 by hyeyukim          #+#    #+#             */
+/*   Updated: 2022/10/29 08:34:34 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef CHECKER_BONUS_H
+# define CHECKER_BONUS_H
 
-t_list	*ft_lstlast(t_list *lst)
-{
-	if (!lst)
-		return (FT_NULL);
-	while (lst->next)
-		lst = lst->next;
-	return (lst);
-}
+#endif

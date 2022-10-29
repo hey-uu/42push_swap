@@ -6,12 +6,12 @@
 /*   By: hyeyukim <hyeyukim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 13:59:49 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/10/27 13:59:50 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/10/29 09:15:18 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include "../libft.h"
+#include "../ft_libft_mandatory/libft.h"
 
 int	ft_nbrlen(long n, int base_len, t_option *opt)
 {

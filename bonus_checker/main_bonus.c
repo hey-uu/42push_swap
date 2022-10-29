@@ -1,21 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   main_bonus.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hyeyukim <hyeyukim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/27 14:01:15 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/10/27 14:01:16 by hyeyukim         ###   ########.fr       */
+/*   Created: 2022/10/29 08:26:46 by hyeyukim          #+#    #+#             */
+/*   Updated: 2022/10/29 08:41:36 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	ft_lstadd_front(t_list **lst, t_list *new)
+int	main(int argc, char *argv[])
 {
-	if (!lst || !new)
-		return ;
-	new->next = (*lst);
-	*lst = new;
+	char	*
 }

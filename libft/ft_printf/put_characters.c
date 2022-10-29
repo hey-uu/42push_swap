@@ -6,14 +6,14 @@
 /*   By: hyeyukim <hyeyukim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 13:59:40 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/10/27 13:59:41 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/10/29 09:15:14 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <unistd.h>
 #include "ft_printf.h"
-#include "../libft.h"
+#include "../ft_libft_mandatory/libft.h"
 
 int	put_percent(t_option *opt, va_list ap)
 {

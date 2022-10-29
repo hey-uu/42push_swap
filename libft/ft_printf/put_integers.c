@@ -6,14 +6,14 @@
 /*   By: hyeyukim <hyeyukim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 13:59:54 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/10/27 13:59:55 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/10/29 09:15:23 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <unistd.h>
 #include "ft_printf.h"
-#include "../libft.h"
+#include "../ft_libft_mandatory/libft.h"
 
 int	put_nbr(t_option *opt, va_list ap)
 {

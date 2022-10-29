@@ -6,14 +6,14 @@
 /*   By: hyeyukim <hyeyukim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 13:58:15 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/10/27 13:58:16 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/10/29 09:14:38 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdlib.h>
 #include "ft_printf.h"
-#include "../libft.h"
+#include "../ft_libft_mandatory/libft.h"
 
 static int	print_identifier(const char *format, int *i, va_list ap)
 {
