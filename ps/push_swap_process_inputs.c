@@ -6,7 +6,7 @@
 /*   By: hyeyukim <hyeyukim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 14:06:18 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/10/29 11:42:01 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/10/31 09:04:36 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,10 +58,7 @@ static int	push_input_data(t_dequeue *input, char *str_data)
 	if ((data == 0 && ft_memcmp(str_data, "0", ft_strlen(str_data)) != 0) || \
 		(data > FT_INT_MAX || data < -FT_INT_MAX - 1) || \
 		!(check_duplication(input, data)))
-	{
-		dq_destroy_dequeue(input);
 		return (0);
-	}
 	dq_push_rear(input, data);
 	return (1);
 }
@@ -74,8 +71,8 @@ static void	*process_input_errors(t_dequeue *input, char **splited)
 		dq_destroy_dequeue(input);
 	if (splited)
 	{
-		i = 0;
-		while (splited[i++])
+		i = -1;
+		while (splited[++i])
 		{
 			free(splited[i]);
 		}

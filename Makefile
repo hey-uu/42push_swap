@@ -6,7 +6,7 @@
 #    By: hyeyukim <hyeyukim@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/29 12:39:36 by hyeyukim          #+#    #+#              #
-#    Updated: 2022/10/31 08:31:24 by hyeyukim         ###   ########.fr        #
+#    Updated: 2022/10/31 08:56:39 by hyeyukim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ include config/variables_definition.mk
 all : $(NAME)
 $(NAME) : $(OBJCS)
 	make -C $(LIB_DIR) all
-	$(CC) $(CFLAGS) $(OBJCS) $(LIB) -o $@ 
+	$(CC) $(CFLAGS) $(OBJCS) $(LIB) -o $@ -fsanitize=address -g3
 
 .PHONY : bonus
 bonus : $(NAME) $(BONUS_NAME)
