@@ -6,7 +6,7 @@
 /*   By: hyeyukim <hyeyukim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 10:45:47 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/10/29 10:45:47 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/10/31 22:09:26 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,16 +19,13 @@ t_ps_set	*ps_set_create(t_dequeue *input)
 
 	set = malloc(sizeof(t_ps_set));
 	if (!set)
-		return (FT_NULL);
+		ft_exit("Error\n", 1);
 	set->map = trg_map_create(input->used_size);
 	set->stack_a = dq_duplicate(input);
 	set->stack_b = dq_create_dequeue(input->used_size);
 	set->commands = dq_create_dequeue(input->used_size * 5);
 	if (!set->map || !set->stack_a || !set->stack_b || !set->commands)
-	{
-		ps_set_destroy(set);
-		return (FT_NULL);
-	}
+		ft_exit("Error\n", 1);
 	return (set);
 }
 

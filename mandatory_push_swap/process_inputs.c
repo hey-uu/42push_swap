@@ -6,7 +6,7 @@
 /*   By: hyeyukim <hyeyukim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 09:18:26 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/10/31 09:19:46 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/10/31 22:07:35 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,9 @@
 #include "../libft/ft_libft_mandatory/libft.h"
 #include "../data_structure/dequeue/ft_dequeue.h"
 #include "merge_sort/merge_sort.h"
-#ifndef FT_INT_MAX
-# define FT_INT_MAX 2147483647
-#endif
+#include "process_inputs.h"
 
-static int	push_input_data(t_dequeue *input, char *str_data);
-static void	*process_input_errors(t_dequeue *input, char **splited);
+static void	push_input_data(t_dequeue *input, char *str_data);
 static int	check_duplication(t_dequeue *input, int data);
 
 t_dequeue	*process_input(int argc, char **argv)
@@ -31,18 +28,17 @@ t_dequeue	*process_input(int argc, char **argv)
 
 	input = dq_create_dequeue(10);
 	if (!input)
-		return (FT_NULL);
+		ft_exit("Error\n", FAIL);
 	i = 0;
 	while (++i < argc)
 	{
 		splited = ft_split(argv[i], ' ');
 		if (!splited || (splited && !*splited))
-			return (process_input_errors(input, splited));
+			ft_exit("Error\n", FAIL);
 		j = -1;
 		while (splited[++j])
 		{
-			if (!push_input_data(input, splited[j]))
-				return (process_input_errors(input, splited));
+			push_input_data(input, splited[j]);
 			free(splited[j]);
 		}
 		free(splited);
@@ -50,7 +46,7 @@ t_dequeue	*process_input(int argc, char **argv)
 	return (input);
 }
 
-static int	push_input_data(t_dequeue *input, char *str_data)
+static void	push_input_data(t_dequeue *input, char *str_data)
 {
 	int	data;
 
@@ -58,27 +54,8 @@ static int	push_input_data(t_dequeue *input, char *str_data)
 	if ((data == 0 && ft_memcmp(str_data, "0", ft_strlen(str_data)) != 0) || \
 		(data > FT_INT_MAX || data < -FT_INT_MAX - 1) || \
 		!(check_duplication(input, data)))
-		return (0);
+		ft_exit("Error\n", FAIL);
 	dq_push_rear(input, data);
-	return (1);
-}
-
-static void	*process_input_errors(t_dequeue *input, char **splited)
-{
-	int	i;
-
-	if (input)
-		dq_destroy_dequeue(input);
-	if (splited)
-	{
-		i = -1;
-		while (splited[++i])
-		{
-			free(splited[i]);
-		}
-		free(splited);
-	}
-	return (FT_NULL);
 }
 
 int	check_duplication(t_dequeue *input, int data)

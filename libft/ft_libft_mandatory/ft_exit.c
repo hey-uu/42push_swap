@@ -1,27 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_exit.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hyeyukim <hyeyukim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/27 14:06:27 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/10/31 22:05:59 by hyeyukim         ###   ########.fr       */
+/*   Created: 2022/10/31 21:50:28 by hyeyukim          #+#    #+#             */
+/*   Updated: 2022/10/31 22:10:54 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include <unistd.h>
+#include "libft.h"
 
-# include "../data_structure/push_swap_set/push_swap_set.h"
-# include "commands/command.h"
-# include "merge_sort/merge_sort.h"
-# include "../libft/ft_printf/ft_printf.h"
-# include "process_inputs.h"
-
-// sort for exceptional cases
-void		ps_sort_exceptional_cases(t_ps_set *set);
-
-void		ps_reduce_commands(t_dequeue *cmds);
-
-#endif
+void	ft_exit(const char *str, int error_status)
+{
+	if (str)
+		write(1, str, ft_strlen(str));
+	exit(error_status);
+}

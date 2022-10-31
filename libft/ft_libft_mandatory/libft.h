@@ -6,7 +6,7 @@
 /*   By: hyeyukim <hyeyukim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 14:04:52 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/10/29 09:20:27 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/10/31 21:53:32 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,4 +71,6 @@ void	ft_putnbr_fd(int n, int fd);
 
 // for push_swap
 long	ft_push_swap_atol(const char *str);
+void	*ft_malloc(size_t size_of);
+void	*ft_malloc(size_t size_of);
 #endif
