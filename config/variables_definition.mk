@@ -6,7 +6,7 @@
 #    By: hyeyukim <hyeyukim@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/31 07:55:47 by hyeyukim          #+#    #+#              #
-#    Updated: 2022/10/31 08:29:44 by hyeyukim         ###   ########.fr        #
+#    Updated: 2022/10/31 09:16:06 by hyeyukim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,14 +19,14 @@ RMFLAGS = -rf
 
 # library
 LIB_NAME= pushswap_ds.a
-LIB_DIR = ds
+LIB_DIR = data_structure
 LIB = $(LIB_DIR)/$(LIB_NAME)
 
 # file names
-PS_FILES = push_swap_main \
-			push_swap_process_inputs \
-			push_swap_sort_exceptional_cases \
-			push_swap_reduce_commands
+PS_FILES = main \
+			process_inputs \
+			sort_exceptional_cases \
+			reduce_commands
 
 CMD_FILES = cmd_multiple_cmds \
 			cmd_push \
@@ -42,10 +42,10 @@ MG_FILES = merge_sort_compare \
 BONUS_FILES = checker_main_bonus
 
 # directories of files
-PS_DIR = ps
+PS_DIR = mandatory_push_swap
 MAIN_DIR = main
-CMD_DIR = push_swap_commands
-MG_DIR = push_swap_merge_sort
+CMD_DIR = commands
+MG_DIR = merge_sort
 BONUS_DIR = bonus_checker
 OBJCS_DIR = objcs
 
@@ -56,4 +56,4 @@ MG_OBJCS = $(addprefix $(OBJCS_DIR)/$(MG_DIR)/, $(addsuffix .o ,$(MG_FILES)))
 OBJCS = $(PS_OBJCS) $(CMD_OBJCS) $(MG_OBJCS)
 
 BONUS_OBJCS = $(addprefix $(OBJCS_DIR)/$(BONUS_DIR)/, $(addsuffix .o, $(BONUS_FILES)))
-CHECKER_OBJCS = $(BONUS_OBJCS) $(CMD_OBJCS) $(MG_OBJCS) objcs/main/push_swap_process_inputs.o
+CHECKER_OBJCS = $(BONUS_OBJCS) $(CMD_OBJCS) $(MG_OBJCS) objcs/main/process_inputs.o

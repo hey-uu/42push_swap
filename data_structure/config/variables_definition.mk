@@ -6,7 +6,7 @@
 #    By: hyeyukim <hyeyukim@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/31 08:27:24 by hyeyukim          #+#    #+#              #
-#    Updated: 2022/10/31 08:27:35 by hyeyukim         ###   ########.fr        #
+#    Updated: 2022/10/31 09:11:12 by hyeyukim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,9 +36,9 @@ TM_FILES = triangle_map_generate \
 			triangle_map_show
 
 # directory of files
-DEQ_DIR = ds_dequeue
-PSS_DIR = ds_push_swap_set
-TM_DIR = ds_triangle_map
+DEQ_DIR = dequeue
+PSS_DIR = push_swap_set
+TM_DIR = triangle_map
 OBJCS_DIR = objcs
 DIRS = $(OBJCS_DIR) $(OBJCS_DIR)/$(DEQ_DIR) $(OBJCS_DIR)/$(PSS_DIR) $(OBJCS_DIR)/$(TM_DIR) 
 

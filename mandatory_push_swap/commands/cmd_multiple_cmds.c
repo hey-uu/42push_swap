@@ -6,11 +6,11 @@
 /*   By: hyeyukim <hyeyukim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 14:05:06 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/10/29 13:17:14 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/10/31 09:12:03 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap_command.h"
+#include "command.h"
 
 void	implement_commands(t_ps_set *set, const int *command, int cmd_size)
 {

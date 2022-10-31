@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap_command.h                                :+:      :+:    :+:   */
+/*   command.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hyeyukim <hyeyukim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/27 14:05:31 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/10/29 17:36:22 by hyeyukim         ###   ########.fr       */
+/*   Created: 2022/10/31 09:14:13 by hyeyukim          #+#    #+#             */
+/*   Updated: 2022/10/31 09:14:16 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_COMMAND_H
-# define PUSH_SWAP_COMMAND_H
+#ifndef COMMAND_H
+# define COMMAND_H
 
-# include "../../ds/ds_push_swap_set/push_swap_set.h"
+# include "../../data_structure/push_swap_set/push_swap_set.h"
 
 enum e_cmd
 {

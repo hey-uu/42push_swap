@@ -6,15 +6,15 @@
 /*   By: hyeyukim <hyeyukim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 13:57:41 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/10/27 14:52:33 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/10/31 09:11:14 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_SET_H
 # define PUSH_SWAP_SET_H
 
-# include "../ds_dequeue/ft_dequeue.h"
-# include "../ds_triangle_map/triangle_map.h"
+# include "../dequeue/ft_dequeue.h"
+# include "../triangle_map/triangle_map.h"
 
 # ifndef FT_NULL
 #  define FT_NULL (void *)0

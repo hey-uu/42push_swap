@@ -6,13 +6,13 @@
 /*   By: hyeyukim <hyeyukim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 14:05:10 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/10/29 14:12:46 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/10/31 09:12:04 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../ds/ds_dequeue/ft_dequeue.h"
+#include "../../data_structure/dequeue/ft_dequeue.h"
 #include "../../libft/ft_printf/ft_printf.h"
-#include "push_swap_command.h"
+#include "command.h"
 
 int	pa(t_ps_set *set)
 {

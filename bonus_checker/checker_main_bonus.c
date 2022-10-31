@@ -6,16 +6,18 @@
 /*   By: hyeyukim <hyeyukim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 08:26:46 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/10/29 16:43:47 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/10/31 09:38:15 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker_bonus.h"
+#include <stdlib.h>
 
 int	main(int argc, char *argvs[])
 {
 	t_dequeue	*input;
 	t_ps_set	*ps_set;
+	t_error		res;
 
 	if (argc <= 1)
 		return (0);
@@ -23,8 +25,10 @@ int	main(int argc, char *argvs[])
 	if (!input)
 		return (terminate_checker(ERROR));
 	ps_set = ps_set_create(input);
-	if (checker_implement_commands(ps_set) == ERROR)
-		return (terminate_checker(ERROR));
+	res = NORMAL;
+	checker_implement_commands(ps_set, &res);
+	if (res == ERROR || res == WRONG)
+		return (terminate_checker(res));
 	if (is_well_sorted(ps_set->stack_a))
 		ft_printf("OK\n");
 	else
@@ -36,6 +40,11 @@ t_error	terminate_checker(t_error is_error)
 {
 	if (is_error == ERROR)
 		ft_printf("Error\n");
+	if (is_error == WRONG)
+	{
+		ft_printf("KO\n");
+		is_error = NORMAL;
+	}
 	exit(is_error);
 	return (is_error);
 }
@@ -60,7 +69,7 @@ int	is_well_sorted(t_dequeue *stack_a)
 	return (YES);
 }
 
-t_error	checker_implement_commands(t_ps_set *set)
+t_error	checker_implement_commands(t_ps_set *set, t_error *res)
 {
 	const t_cmd	fcts[11] = {pa, pb, sa, sb, ss, ra, rb, rr, rra, rrb, rrr};
 	char		*line;
@@ -72,8 +81,10 @@ t_error	checker_implement_commands(t_ps_set *set)
 		if (line[ft_strlen(line) - 1] == '\n')
 			line[ft_strlen(line) - 1] = 0;
 		cmd = get_command(line);
-		if (cmd == NOT_CMD || fcts[cmd](set) == 0)
-			return (ERROR);
+		if (cmd == NOT_CMD)
+			*res = ERROR;
+		if (fcts[cmd](set) == 0)
+			*res = WRONG;
 		free(line);
 		line = get_next_line(0);
 		if (!line)

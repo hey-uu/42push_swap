@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap_sort_exceptional_cases.c                 :+:      :+:    :+:   */
+/*   sort_exceptional_cases.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hyeyukim <hyeyukim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/28 01:35:57 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/10/28 09:31:30 by hyeyukim         ###   ########.fr       */
+/*   Created: 2022/10/31 09:18:01 by hyeyukim          #+#    #+#             */
+/*   Updated: 2022/10/31 09:18:12 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ds/ds_push_swap_set/push_swap_set.h"
-#include "../ds/ds_dequeue/ft_dequeue.h"
-#include "push_swap_merge_sort/merge_sort.h"
+#include "../data_structure/push_swap_set/push_swap_set.h"
+#include "../data_structure/dequeue/ft_dequeue.h"
+#include "merge_sort/merge_sort.h"
 
 static void	sort_two_input_values(t_ps_set *set);
 static void	sort_three_input_values(t_ps_set *set);

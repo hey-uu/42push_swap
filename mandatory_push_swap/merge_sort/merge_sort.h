@@ -6,18 +6,18 @@
 /*   By: hyeyukim <hyeyukim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 14:06:01 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/10/28 10:36:05 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/10/31 09:12:42 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MERGE_SORT_H
 # define MERGE_SORT_H
 
-# include "../../ds/ds_dequeue/ft_dequeue.h"
-# include "../../ds/ds_push_swap_set/push_swap_set.h"
-# include "../../ds/ds_triangle_map/triangle_map.h"
+# include "../../data_structure/dequeue/ft_dequeue.h"
+# include "../../data_structure/push_swap_set/push_swap_set.h"
+# include "../../data_structure/triangle_map/triangle_map.h"
 # include "../../libft/ft_printf/ft_printf.h"
-# include "../push_swap_commands/push_swap_command.h"
+# include "../commands/command.h"
 
 enum e_two_comb
 {

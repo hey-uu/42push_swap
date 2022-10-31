@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap_process_inputs.c                         :+:      :+:    :+:   */
+/*   process_inputs.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hyeyukim <hyeyukim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/27 14:06:18 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/10/31 09:04:36 by hyeyukim         ###   ########.fr       */
+/*   Created: 2022/10/31 09:18:26 by hyeyukim          #+#    #+#             */
+/*   Updated: 2022/10/31 09:19:46 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "../libft/ft_libft_mandatory/libft.h"
-#include "../ds/ds_dequeue/ft_dequeue.h"
-#include "push_swap_merge_sort/merge_sort.h"
+#include "../data_structure/dequeue/ft_dequeue.h"
+#include "merge_sort/merge_sort.h"
 #ifndef FT_INT_MAX
 # define FT_INT_MAX 2147483647
 #endif

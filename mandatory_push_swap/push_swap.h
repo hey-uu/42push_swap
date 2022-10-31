@@ -6,16 +6,16 @@
 /*   By: hyeyukim <hyeyukim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 14:06:27 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/10/29 11:01:44 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/10/31 09:13:04 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include "../ds/ds_push_swap_set/push_swap_set.h"
-# include "push_swap_commands/push_swap_command.h"
-# include "push_swap_merge_sort/merge_sort.h"
+# include "../data_structure/push_swap_set/push_swap_set.h"
+# include "commands/command.h"
+# include "merge_sort/merge_sort.h"
 # include "../libft/ft_printf/ft_printf.h"
 
 enum e_is_error
