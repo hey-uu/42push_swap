@@ -6,7 +6,7 @@
 /*   By: hyeyukim <hyeyukim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 14:05:56 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/10/28 10:39:31 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/11/01 21:19:11 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,12 @@ void	divide_to_triangles_and_pb(t_ps_set *set)
 			push_three_elements(set, set->map->mold[start + i]);
 		else if (set->map->val[start + i] == 4)
 			push_four_elements(set, set->map->mold[start + i]);
-		else
+		else if (set->map->val[start + i] == 5)
 			push_five_elements(set, set->map->mold[start + i]);
+		else if (set->map->val[start + i] == 6)
+			push_six_elements(set, set->map->mold[start + i]);
+		else if (set->map->val[start + i] == 7)
+			push_seven_elements(set, set->map->mold[start + i]);
 	}
 }
 

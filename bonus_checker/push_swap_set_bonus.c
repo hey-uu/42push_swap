@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   process_inputs.h                                   :+:      :+:    :+:   */
+/*   push_swap_set_generate.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hyeyukim <hyeyukim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/31 09:17:55 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/11/01 21:52:57 by hyeyukim         ###   ########.fr       */
+/*   Created: 2022/10/29 10:45:47 by hyeyukim          #+#    #+#             */
+/*   Updated: 2022/11/01 22:11:05 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PROCESS_INPUTS_H
-# define PROCESS_INPUTS_H
+#include "push_swap_set_bonus.h"
+#include "../libft/ft_libft_mandatory/libft.h"
+#include <stdlib.h>
 
-# include "../data_structure/dequeue/dequeue.h"
-
-# ifndef FT_INT_MAX
-#  define FT_INT_MAX 2147483647
-# endif
-
-enum e_is_error
+t_ps_set	*ps_set_create(t_dequeue *input)
 {
-	SUCCESS = 0,
-	FAIL = 1
-};
+	t_ps_set	*set;
 
-t_dequeue	*process_input(int argc, char **argv);
-
-#endif
+	set = malloc(sizeof(t_ps_set));
+	if (!set)
+		ft_exit("Error\n", 1);
+	set->stack_a = dq_duplicate(input);
+	set->stack_b = dq_create_dequeue(input->used_size);
+	return (set);
+}

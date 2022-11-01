@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   dequeue_generate.c                                 :+:      :+:    :+:   */
+/*   dequeue_bonus.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hyeyukim <hyeyukim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 13:56:56 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/11/01 21:52:57 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/11/01 22:46:03 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "dequeue.h"
-#include "../../libft/ft_libft_mandatory/libft.h"
+#include "dequeue_bonus.h"
+#include "../libft/ft_libft_mandatory/libft.h"
 #include <stdlib.h>
 
 t_dequeue	*dq_create_dequeue(int initial_size)
@@ -29,6 +29,24 @@ t_dequeue	*dq_create_dequeue(int initial_size)
 	if (!deq->arr)
 		ft_exit("Error\n", 1);
 	return (deq);
+}
+
+t_dequeue	*dq_duplicate(t_dequeue *src)
+{
+	t_dequeue	*dest;
+	int			i;
+
+	if (!src)
+		return (FT_NULL);
+	dest = dq_create_dequeue(src->used_size);
+	if (!dest)
+		ft_exit("Error\n", 1);
+	i = -1;
+	while (++i < src->used_size)
+	{
+		dq_push_rear(dest, src->arr[(src->front + i) % src->size]);
+	}
+	return (dest);
 }
 
 int	dq_double_size(t_dequeue *deq)
@@ -51,4 +69,15 @@ int	dq_double_size(t_dequeue *deq)
 	free(deq->arr);
 	deq->arr = new_arr;
 	return (1);
+}
+
+long	dq_get_value(t_dequeue *deq, int loc, int idx)
+{
+	if (deq->used_size <= idx)
+		return (FT_LONG_MAX);
+	if (loc == FRONT)
+		return ((long)deq->arr[(deq->front + idx) % deq->size]);
+	else if (loc == REAR)
+		return ((long)deq->arr[(deq->rear - 1 - idx + deq->size) % deq->size]);
+	return (FT_LONG_MAX);
 }

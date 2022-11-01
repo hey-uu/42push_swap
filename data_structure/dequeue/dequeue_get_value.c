@@ -6,11 +6,11 @@
 /*   By: hyeyukim <hyeyukim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 13:57:06 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/10/28 21:25:35 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/11/01 21:52:57 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_dequeue.h"
+#include "dequeue.h"
 
 long	dq_get_value(t_dequeue *deq, int loc, int idx)
 {

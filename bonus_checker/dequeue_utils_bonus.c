@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   dequeue_push_or_pop.c                              :+:      :+:    :+:   */
+/*   dequeue_utils_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hyeyukim <hyeyukim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/27 13:57:12 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/11/01 21:52:57 by hyeyukim         ###   ########.fr       */
+/*   Created: 2022/11/01 22:45:17 by hyeyukim          #+#    #+#             */
+/*   Updated: 2022/11/01 22:45:27 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "dequeue.h"
+#include "dequeue_bonus.h"
 
 void	dq_push_front(t_dequeue *deq, int new_data)
 {

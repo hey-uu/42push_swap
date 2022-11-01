@@ -6,14 +6,14 @@
 /*   By: hyeyukim <hyeyukim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 14:06:01 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/10/31 09:12:42 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/11/01 21:52:57 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MERGE_SORT_H
 # define MERGE_SORT_H
 
-# include "../../data_structure/dequeue/ft_dequeue.h"
+# include "../../data_structure/dequeue/dequeue.h"
 # include "../../data_structure/push_swap_set/push_swap_set.h"
 # include "../../data_structure/triangle_map/triangle_map.h"
 # include "../../libft/ft_printf/ft_printf.h"
@@ -73,6 +73,10 @@ void	push_two_elements(t_ps_set *set, int mold);
 void	push_three_elements(t_ps_set *set, int mold);
 void	push_four_elements(t_ps_set *set, int mold);
 void	push_five_elements(t_ps_set *set, int mold);
+void	push_six_elements(t_ps_set *set, int mold);
+void	push_seven_elements(t_ps_set *set, int mold);
+void	sort_three_elements_in_place(t_ps_set *set, int mold);
+void	sort_each_two_front_elements_and_rr(t_ps_set *set, int mold);
 
 // merge_sort.c
 void	ps_merge_sort(t_ps_set *set);

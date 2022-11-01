@@ -6,7 +6,7 @@
 /*   By: hyeyukim <hyeyukim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 14:05:41 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/10/28 10:13:30 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/11/01 21:12:30 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,8 @@ void	get_source(t_ps_set *set, int *arr, int start, int idx)
 
 void	combine_source(t_ps_set *set, int *src, int mold, int cmd)
 {
-	const int	cmd_tab[2][3][2] = {{{RRA, NON}, {PA, NON}, {RRB, PA}}, \
-									{{RRB, NON}, {PB, NON}, {RRA, PB}}};
+	const int	cmd_tab[2][3][2] = {{{RRA, NN}, {PA, NN}, {RRB, PA}}, \
+									{{RRB, NN}, {PB, NN}, {RRA, PB}}};
 	int			highest_idx;
 
 	while (src[0] || src[1] || src[2])

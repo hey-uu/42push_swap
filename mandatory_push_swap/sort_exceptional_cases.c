@@ -6,12 +6,12 @@
 /*   By: hyeyukim <hyeyukim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 09:18:01 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/10/31 09:18:12 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/11/01 21:52:57 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../data_structure/push_swap_set/push_swap_set.h"
-#include "../data_structure/dequeue/ft_dequeue.h"
+#include "../data_structure/dequeue/dequeue.h"
 #include "merge_sort/merge_sort.h"
 
 static void	sort_two_input_values(t_ps_set *set);
@@ -43,16 +43,16 @@ void	sort_three_input_values(t_ps_set *set)
 	const int	cmp_res = cmp3(dq_get_value(set->stack_a, FRONT, 0), \
 							dq_get_value(set->stack_a, FRONT, 1), \
 							dq_get_value(set->stack_a, FRONT, 2), UP);
-	const int	tab[6][2] = {{SA, RRA}, {RA, NON}, {SA, NON}, \
-							{RRA, NON}, {NON, NON}, {SA, RA}};
+	const int	tab[6][2] = {{SA, RRA}, {RA, NN}, {SA, NN}, \
+							{RRA, NN}, {NN, NN}, {SA, RA}};
 
 	implement_commands(set, tab[cmp_res], 2);
 }
 
 void	sort_four_input_values(t_ps_set *set)
 {
-	const int	pb_tab[4][3] = {{PB, NON, NON}, {RA, PB, NON}, \
-								{RA, RA, PB}, {RRA, PB, NON}};
+	const int	pb_tab[4][3] = {{PB, NN, NN}, {RA, PB, NN}, \
+								{RA, RA, PB}, {RRA, PB, NN}};
 	int			values[4];
 	int			min_idx;
 
@@ -65,8 +65,8 @@ void	sort_four_input_values(t_ps_set *set)
 
 void	sort_five_input_values(t_ps_set *set)
 {
-	const int	pb_tab[5][3] = {{PB, NON, NON}, {RA, PB, NON}, {RA, RA, PB}, \
-								{RRA, RRA, PB}, {RRA, PB, NON}};
+	const int	pb_tab[5][3] = {{PB, NN, NN}, {RA, PB, NN}, {RA, RA, PB}, \
+								{RRA, RRA, PB}, {RRA, PB, NN}};
 	int			values[5];
 	int			min_idx;
 

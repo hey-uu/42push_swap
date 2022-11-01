@@ -6,7 +6,7 @@
 /*   By: hyeyukim <hyeyukim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 09:14:23 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/10/31 09:30:37 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/11/01 22:47:04 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@
 # include "../libft/ft_get_next_line/get_next_line.h"
 # include "../libft/ft_libft_mandatory/libft.h"
 # include "../libft/ft_printf/ft_printf.h"
-# include "../data_structure/dequeue/ft_dequeue.h"
-# include "../data_structure/push_swap_set/push_swap_set.h"
-# include "../mandatory_push_swap/process_inputs.h"
-# include "../mandatory_push_swap/commands/command.h"
+# include "dequeue_bonus.h"
+# include "push_swap_set_bonus.h"
+# include "command_bonus.h"
+# include "process_inputs_bonus.h"
 
 typedef enum e_checker_error
 {
@@ -30,14 +30,8 @@ typedef enum e_checker_error
 	NOT_CMD = 11
 }	t_error;
 
-typedef enum e_is_sorted
-{
-	NO = 0,
-	YES = 1
-}	t_is_sorted;
-
-t_error	terminate_checker(t_error is_error);
-int		is_well_sorted(t_dequeue *stack_a);
+void	terminate_checker(t_error is_error);
+void	check_whether_a_is_sorted(t_dequeue *stack_a);
 t_error	checker_implement_commands(t_ps_set *set, t_error *res);
 int		get_command(char *str);
 

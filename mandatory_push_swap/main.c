@@ -6,13 +6,12 @@
 /*   By: hyeyukim <hyeyukim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 09:17:18 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/10/31 22:11:10 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/11/01 21:12:30 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static int	terminate_program(t_ps_set *set, t_dequeue *input, int is_error);
 static void	ps_show_commands(t_dequeue *commands);
 
 int	main(int argc, char *argv[])
@@ -46,7 +45,7 @@ void	ps_show_commands(t_dequeue *commands)
 	while (++i < commands->used_size)
 	{
 		cmd = dq_get_value(commands, FRONT, i);
-		if (cmd != NON)
+		if (cmd != NN)
 			ft_printf("%s\n", tab[dq_get_value(commands, FRONT, i)]);
 	}
 }

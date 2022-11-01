@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   cmd_swap.c                                         :+:      :+:    :+:   */
+/*   cmd_swap_bonus.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hyeyukim <hyeyukim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/27 14:05:25 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/11/01 21:52:57 by hyeyukim         ###   ########.fr       */
+/*   Created: 2022/11/01 17:38:30 by hyeyukim          #+#    #+#             */
+/*   Updated: 2022/11/01 22:31:42 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../data_structure/dequeue/dequeue.h"
-#include "../../libft/ft_printf/ft_printf.h"
-#include "command.h"
+#include "dequeue_bonus.h"
+#include "push_swap_set_bonus.h"
+#include "command_bonus.h"
 
 int	sa(t_ps_set *set)
 {
@@ -25,7 +25,6 @@ int	sa(t_ps_set *set)
 	below_top_data = dq_pop_front(set->stack_a);
 	dq_push_front(set->stack_a, top_data);
 	dq_push_front(set->stack_a, below_top_data);
-	dq_push_rear(set->commands, SA);
 	return (1);
 }
 
@@ -40,7 +39,6 @@ int	sb(t_ps_set *set)
 	below_top_data = dq_pop_front(set->stack_b);
 	dq_push_front(set->stack_b, top_data);
 	dq_push_front(set->stack_b, below_top_data);
-	dq_push_rear(set->commands, SB);
 	return (1);
 }
 
@@ -60,6 +58,5 @@ int	ss(t_ps_set *set)
 	below_top_data = dq_pop_front(set->stack_b);
 	dq_push_front(set->stack_b, top_data);
 	dq_push_front(set->stack_b, below_top_data);
-	dq_push_rear(set->commands, SS);
 	return (1);
 }

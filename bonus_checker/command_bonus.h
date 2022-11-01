@@ -1,19 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   command.h                                          :+:      :+:    :+:   */
+/*   command_bonus.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hyeyukim <hyeyukim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/31 09:14:13 by hyeyukim          #+#    #+#             */
+/*   Created: 2022/11/01 17:33:59 by hyeyukim          #+#    #+#             */
 /*   Updated: 2022/11/01 21:12:30 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef COMMAND_H
-# define COMMAND_H
-
-# include "../../data_structure/push_swap_set/push_swap_set.h"
+#ifndef COMMAND_BONUS_H
+# define COMMAND_BONUS_H
 
 enum e_cmd
 {
@@ -32,11 +30,6 @@ enum e_cmd
 };
 
 typedef int	(*t_cmd)(t_ps_set *);
-
-// implement mutiple commands at once
-void	implement_commands(t_ps_set *set, const int *command, int cmd_size);
-void	push_all(t_ps_set *set, int cmd);
-void	push_n_elements(t_ps_set *set, int number, int cmd);
 
 // basic commands for push swap
 int		sa(t_ps_set *set);

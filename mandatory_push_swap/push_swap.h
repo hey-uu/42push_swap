@@ -6,7 +6,7 @@
 /*   By: hyeyukim <hyeyukim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 14:06:27 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/10/31 22:05:59 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/11/01 17:13:18 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include "../data_structure/push_swap_set/push_swap_set.h"
 # include "commands/command.h"
 # include "merge_sort/merge_sort.h"
-# include "../libft/ft_printf/ft_printf.h"
+# include "../libft/ft_libft_mandatory/libft.h"
 # include "process_inputs.h"
 
 // sort for exceptional cases

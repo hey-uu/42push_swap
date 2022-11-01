@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dequeue.h                                       :+:      :+:    :+:   */
+/*   dequeue.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hyeyukim <hyeyukim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 13:57:30 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/10/28 21:25:44 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/11/01 21:47:28 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_DEQUEUE_H
-# define FT_DEQUEUE_H
+#ifndef DEQUEUE_H
+# define DEQUEUE_H
 
 # ifndef FT_LONG_MAX
 #  define FT_LONG_MAX 9223372036854775807L
@@ -42,7 +42,6 @@ typedef struct s_dequeue
 // dequeue_generate
 t_dequeue	*dq_create_dequeue(int initial_size);
 int			dq_double_size(t_dequeue *dequeue);
-void		dq_destroy_dequeue(t_dequeue *dequeue);
 
 // dequeue_duplicate
 t_dequeue	*dq_duplicate(t_dequeue *src);

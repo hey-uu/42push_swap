@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   process_inputs.c                                   :+:      :+:    :+:   */
+/*   process_inputs_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hyeyukim <hyeyukim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/31 09:18:26 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/11/01 21:52:57 by hyeyukim         ###   ########.fr       */
+/*   Created: 2022/11/01 17:38:37 by hyeyukim          #+#    #+#             */
+/*   Updated: 2022/11/01 21:55:37 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "../libft/ft_libft_mandatory/libft.h"
-#include "../data_structure/dequeue/dequeue.h"
-#include "merge_sort/merge_sort.h"
-#include "process_inputs.h"
+#include "dequeue_bonus.h"
+#include "process_inputs_bonus.h"
 
 static void	push_input_data(t_dequeue *input, char *str_data);
 static int	check_duplication(t_dequeue *input, int data);
+static int	cmp2(int a, int b, int mold);
 
 t_dequeue	*process_input(int argc, char **argv)
 {
@@ -65,8 +65,28 @@ int	check_duplication(t_dequeue *input, int data)
 	i = -1;
 	while (++i < input->used_size)
 	{
-		if (cmp2(data, dq_get_value(input, FRONT, i), UP) == AA)
+		if (cmp2(data, dq_get_value(input, FRONT, i), 1) == AA)
 			return (0);
 	}
 	return (1);
+}
+
+int	cmp2(int a, int b, int mold)
+{
+	if (a - b == 0)
+		return (AA);
+	if (mold == 1)
+	{
+		if (a - b > 0)
+			return (AB);
+		else
+			return (BA);
+	}
+	else
+	{
+		if (b - a > 0)
+			return (AB);
+		else
+			return (BA);
+	}
 }

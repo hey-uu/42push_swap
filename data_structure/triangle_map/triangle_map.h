@@ -6,7 +6,7 @@
 /*   By: hyeyukim <hyeyukim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 13:58:09 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/10/27 13:58:10 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/11/01 17:18:55 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,11 @@ typedef struct s_trg_map
 {
 	int			*val;
 	char		*mold;
-	int			size;
 	int			depth;
 }	t_trg_map;
 
 // triangle_map_generate
 t_trg_map	*trg_map_create(int size);
-void		trg_map_destroy(t_trg_map *map);
 
 // triangle_map_show
 void		trg_map_show_1(const t_trg_map *map, int cur_depth, int idx);

@@ -6,14 +6,14 @@
 /*   By: hyeyukim <hyeyukim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 13:57:41 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/10/31 22:08:50 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/11/01 21:52:57 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_SET_H
 # define PUSH_SWAP_SET_H
 
-# include "../dequeue/ft_dequeue.h"
+# include "../dequeue/dequeue.h"
 # include "../triangle_map/triangle_map.h"
 
 # ifndef FT_NULL
@@ -36,7 +36,6 @@ typedef struct s_ps_set
 
 // push_swap_set_generate
 t_ps_set	*ps_set_create(t_dequeue *input);
-void		ps_set_destroy(t_ps_set *set);
 
 // push_swap_set_show
 void		ps_set_show(t_ps_set *set, int map_opt, int stack_opt, int cmd_opt);

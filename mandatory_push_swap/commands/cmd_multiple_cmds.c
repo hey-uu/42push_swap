@@ -6,7 +6,7 @@
 /*   By: hyeyukim <hyeyukim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 14:05:06 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/10/31 09:12:03 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/11/01 21:12:30 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	implement_commands(t_ps_set *set, const int *command, int cmd_size)
 	i = -1;
 	while (++i < cmd_size)
 	{
-		if (command[i] != NON)
+		if (command[i] != NN)
 			cmd_fcts[command[i]](set);
 	}
 }

@@ -6,11 +6,11 @@
 /*   By: hyeyukim <hyeyukim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 14:05:16 by hyeyukim          #+#    #+#             */
-/*   Updated: 2022/10/31 09:12:05 by hyeyukim         ###   ########.fr       */
+/*   Updated: 2022/11/01 21:52:57 by hyeyukim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../data_structure/dequeue/ft_dequeue.h"
+#include "../../data_structure/dequeue/dequeue.h"
 #include "../../libft/ft_printf/ft_printf.h"
 #include "command.h"
 
